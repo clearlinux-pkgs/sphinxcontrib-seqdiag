@@ -4,7 +4,7 @@
 #
 Name     : sphinxcontrib-seqdiag
 Version  : 0.8.4
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/source/s/sphinxcontrib-seqdiag/sphinxcontrib-seqdiag-0.8.4.tar.gz
 Source0  : https://pypi.python.org/packages/source/s/sphinxcontrib-seqdiag/sphinxcontrib-seqdiag-0.8.4.tar.gz
 Summary  : Sphinx "seqdiag" extension
@@ -49,4 +49,8 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot}
 
 %files python
 %defattr(-,root,root,-)
+%exclude /usr/lib/python2.7/site-packages/tests/__init__.py
+%exclude /usr/lib/python2.7/site-packages/tests/__init__.pyc
+%exclude /usr/lib/python3.4/site-packages/tests/__init__.py
+%exclude /usr/lib/python3.4/site-packages/tests/__pycache__/__init__.cpython-34.pyc
 /usr/lib/python*/*
